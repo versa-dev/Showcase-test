@@ -4,7 +4,7 @@ import Home from "./Home";
 import Main from "./Main";
 
 const Index = () => {
-  return <Container>{true ? <Main /> : <Home />}</Container>;
+  return <Container>{false ? <Main /> : <Home />}</Container>;
 };
 
 export default Index;
