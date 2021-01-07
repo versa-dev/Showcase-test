@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { actions } from "../redux/education";
 import Input from "../components/Elements/Input";
 import Button from "../components/Elements/Button";
 import Text from "../components/Elements/Text";
 
 function Home(props) {
+  const dispatch = useDispatch();
   const [userName, setUserName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!userName) return;
+    dispatch(actions.setName(userName));
   };
 
   return (
