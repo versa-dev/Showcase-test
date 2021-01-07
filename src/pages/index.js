@@ -6,7 +6,7 @@ import Main from "./Main";
 
 const Index = () => {
   const { name } = useSelector((state) => state.education);
-  return <Container>{name ? <Main /> : <Home />}</Container>;
+  return <Container>{!name ? <Main /> : <Home />}</Container>;
 };
 
 export default Index;
